@@ -1,0 +1,19 @@
+<div class="main_conatiner">  
+<div class="meddSection">
+        <div class="topVideoSec" ng-repeat="itemList in middData | limitTo:1:0">
+                <a ng-href="https://www.youtube.com/watch?v={{itemList.snippet.resourceId.videoId}}"> <img src="{{itemList.snippet.thumbnails.high.url}}"  alt=""/></a>
+                <h1><a ng-href="https://www.youtube.com/watch?v={{itemList.snippet.resourceId.videoId}}">{{itemList.snippet.title}}</a></h1>
+                <a ng-href="https://www.youtube.com/watch?v={{itemList.snippet.resourceId.videoId}}"><span class="youtubeIcon1"></span></a>
+        </div>
+        <ul>
+            <li ng-repeat="itemList in middData | limitTo:11:1">
+                <div class="leftSec">
+                   <a ng-href="https://www.youtube.com/watch?v={{itemList.snippet.resourceId.videoId}}"><img src="{{itemList.snippet.thumbnails.medium.url}}"  alt=""/></a>
+                   <a ng-href="https://www.youtube.com/watch?v={{itemList.snippet.resourceId.videoId}}"><span class="youtubeIcon"></span></a>
+                   <h2><a ng-href="https://www.youtube.com/watch?v={{itemList.snippet.resourceId.videoId}}">{{itemList.snippet.title}}</a></h2>
+                    <p>{{itemList.snippet.description}}</p>  
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

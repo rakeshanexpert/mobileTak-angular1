@@ -1,0 +1,7 @@
+ <div class="main_conatiner">  
+    <div class="topVideoSec" ng-repeat="itemList in middData | limitTo:1:0">
+        <img src="{{itemList.snippet.thumbnails.medium.url}}"  alt=""/>
+        <p>{{itemList.snippet.description}}</p>  
+        
+    </div>  
+</div>

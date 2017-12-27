@@ -1,0 +1,39 @@
+<!doctype html>
+<html ng-app="mainApp">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{{navadata.items.snippet.title}}</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+ <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+ <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+
+
+</head>
+
+<body>
+	
+<div class="main_conatiner">
+    <div class="mainNavigation" ng-controller="navController"> 
+        <ul>
+            <li ng-repeat="navList in navadata">
+                    <a ng-href="{{navList.navUrl}}"> {{navList.navName}}</a>  
+                <ul>
+                    <li ng-repeat="dropdownList in navList.dropdown">
+
+                        <a ng-href="{{dropdownList.dropDownUrl}}">{{dropdownList.dropDownName}} </a> 
+                          
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+<ng-view></ng-view>
+
+</body>
+</html>
